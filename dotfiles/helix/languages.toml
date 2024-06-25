@@ -1,0 +1,32 @@
+[language-server.bqnlsp]
+command = "bqnlsp"
+
+[[language]]
+name = "bqn"
+language-servers = ["BQNLSP"]
+language-id = "bqn"
+file-types = ["bqn"]
+injection-regex = "bqn"
+scope = "source.bqn"
+roots = []
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+shebangs = ["BQN", "CBQN", "bqn", "cbqn"]
+
+[[grammar]]
+name = "bqn"
+source.git = "https://github.com/shnarazk/tree-sitter-bqn"
+source.rev = "a56f2d20ee42d39afe67730eeb13c2f41e1b0877"
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+"'" = "'"
+'"' = '"'
+'⟨' = '⟩'
+
+[[language]]
+name = "typescript"
+file-types = ["ts", "js"]
+language-servers = ["deno-lsp"]

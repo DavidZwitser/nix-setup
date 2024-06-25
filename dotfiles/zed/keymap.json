@@ -1,0 +1,47 @@
+[
+  // {
+  //   "context": "Editor && VimControl && !VimWaiting && !menu",
+  //   "bindings": {
+  //     "w": "vim::NextSubwordStart",
+  //     "b": "vim::PreviousSubwordStart",
+  //     "e": "vim::NextSubwordEnd",
+  //     "g e": "vim::PreviousSubwordEnd"
+  //   }
+  // },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-]": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-[": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-;": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-'": ["workspace::ActivatePaneInDirection", "Down"],
+      "alt-h": null,
+      "alt-d": null,
+      "alt-b": null,
+      "alt-f": null,
+      "alt-shift-b": null,
+      "alt-shift-f": null,
+      "alt-v": null,
+      "alt-shift-t": null
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-t": null,
+      "alt-shift-t": null,
+      "cmd-shift-r": [
+        "task::Spawn",
+        {
+          "task_name": "BQN run file"
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "alt-z": null
+    }
+  }
+]

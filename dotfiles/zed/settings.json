@@ -1,0 +1,83 @@
+{
+  "show_inline_completions": false,
+  "languages": {
+    "Elm": {
+      "show_inline_completions": false
+    },
+    "GLSL": {
+      "show_copilot_suggestions": false
+    },
+    "Gleam": {
+      "show_copilot_suggestions": false
+    },
+    "Lua": {
+      "show_copilot_suggestions": true,
+      "tab_size": 4
+    },
+    "Markdown": {
+      "language_servers": ["markdown-oxide"]
+    }
+  },
+  "assistant": {
+    "version": "1",
+    "provider": {
+      "default_model": {
+        "name": "codellama:latest",
+        "max_tokens": 2048,
+        "keep_alive": "10m"
+      },
+      "name": "ollama"
+      // Recommended setting to allow for model startup
+    }
+  },
+  // "show_whitespaces": "all",
+  "relative_line_numbers": true,
+  "vim_mode": true,
+  "vim": {
+    "use_multiline_find": true
+  },
+  "inline_blame": {
+    "enabeled": false
+  },
+  "tab_size": 2,
+  // "buffer_font_family": "BQN386 Unicode",
+  "buffer_font_size": 22,
+  "theme": "Gruvbox Dark Hard",
+  "ui_font_size": 16,
+  "terminal": {
+    "dock": "right",
+    "shell": {
+      "program": "fish"
+    }
+  },
+  "collaboration_panel": {
+    "button": false
+    // "dock": "bottom"
+  },
+  "chat_panel": {
+    "button": false
+  },
+  "scrollbar": {
+    "git_diff": false
+    // "diagnostics": false
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "git": {
+    "git_gutter": "hide"
+  },
+  "gutter": {
+    // Whether to show line numbers in the gutter.
+    "line_numbers": true
+    // Whether to show code action buttons in the gutter.
+    // "code_actions": false
+    // Whether to show fold buttons in the gutter.
+    // "folds": false
+  },
+  "show_call_status_icon": false,
+  "journal": {
+    "path": "~/journal",
+    "hour_format": "hour24"
+  }
+}
