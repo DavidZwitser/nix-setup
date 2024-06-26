@@ -1,13 +1,4 @@
 [
-  // {
-  //   "context": "Editor && VimControl && !VimWaiting && !menu",
-  //   "bindings": {
-  //     "w": "vim::NextSubwordStart",
-  //     "b": "vim::PreviousSubwordStart",
-  //     "e": "vim::NextSubwordEnd",
-  //     "g e": "vim::PreviousSubwordEnd"
-  //   }
-  // },
   {
     "context": "Editor",
     "bindings": {

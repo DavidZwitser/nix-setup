@@ -1,4 +1,5 @@
 {
+  // "buffer_font_family": "BQN386 Unicode",
   "show_inline_completions": false,
   "languages": {
     "Elm": {
@@ -40,7 +41,6 @@
     "enabeled": false
   },
   "tab_size": 2,
-  // "buffer_font_family": "BQN386 Unicode",
   "buffer_font_size": 22,
   "theme": "Gruvbox Dark Hard",
   "ui_font_size": 16,
@@ -52,7 +52,6 @@
   },
   "collaboration_panel": {
     "button": false
-    // "dock": "bottom"
   },
   "chat_panel": {
     "button": false
@@ -70,9 +69,7 @@
   "gutter": {
     // Whether to show line numbers in the gutter.
     "line_numbers": true
-    // Whether to show code action buttons in the gutter.
     // "code_actions": false
-    // Whether to show fold buttons in the gutter.
     // "folds": false
   },
   "show_call_status_icon": false,

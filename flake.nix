@@ -18,9 +18,6 @@
   {
     darwinConfigurations.${system} = nix-darwin.lib.darwinSystem {
       modules = [
-        # Darwin setup
-        (import setup/darwin.nix self)
-
         # Home manager setup
         home-manager.darwinModules.home-manager {
           home-manager = {
@@ -32,6 +29,9 @@
             users.david = import setup/davids_home.nix;
           };
         }
+
+        # Darwin setup
+        (import setup/darwin.nix self)
       ];
     };
 

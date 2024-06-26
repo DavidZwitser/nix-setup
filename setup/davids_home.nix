@@ -25,21 +25,19 @@ in
         set -g fish_greeting 'Letsgooo'
         fish_vi_key_bindings
 
-        abbr -a kr cd /Users/${username}/Library/Mobile\ Documents/com\~apple\~CloudDocs/Krakinn
+        abbr -a cd z
+        abbr -a kr cd "/Users/${username}/Library/Mobile\ Documents/com\~apple\~CloudDocs/Krakinn"
         abbr -a nix-r darwin-rebuild switch --flake ~/.config/nix-setup
       '';
     };
 
+    # Using nushell for data manipulation.
     nushell = {
       enable = true;
-      configFile.source   = ../dotfiles/nushell/default_config.nu;
-      envFile.source      = ../dotfiles/nushell/default_env.nu;
-      extraConfig         = /*nu*/''
+      extraConfig = /*nu*/''
         use std "path add"
         path add /run/current-system/sw/bin
-        path add /Users/${username}/.nix-profile/bin
         path add /etc/profiles/per-user/${username}/bin
-        path add /nix/var/nix/profiles/default/bin
 
         def lsg [] { ls | sort-by type name -i | grid -c | str trim }
       '';
@@ -93,8 +91,6 @@ in
 
   home = {
     packages = [
-      pkgs.ghidra
-      pkgs.rectangle
       pkgs.bqn386
     ];
 
@@ -105,12 +101,14 @@ in
       darwin_zed_folder = "${base}/dotfiles/zed";
     in
     {
+      # Symlinking zed files so I can edit them both trough zed and in here
       "${zed_folder}/settings.json".source  = link_to "${darwin_zed_folder}/settings.json";
       "${zed_folder}/keymap.json".source    = link_to "${darwin_zed_folder}/keymap.json";
       "${zed_folder}/tasks.json".source     = link_to "${darwin_zed_folder}/tasks.json";
     };
 
     activation = {
+      # Setting up iterm2 to read from my custom settings
       setup_iterm2_dotfiles = lib.hm.dag.entryAfter ["writeBoundry"] /*bash*/ ''
         /usr/bin/defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "${base}/dotfiles/iterm2"
         /usr/bin/defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
