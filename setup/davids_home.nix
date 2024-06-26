@@ -1,10 +1,11 @@
 {config, pkgs, lib, ...}:
 let
-  home = "/Users/david";
-  base = home + "/.config/nix-darwin";
+  username = "david";
+  home = "/Users/${username}";
+  base = home + "/.config/nix-setup";
 in
 {
-  home.username = "david";
+  home.username = username;
   home.homeDirectory = home;
 
   programs = {
@@ -24,20 +25,20 @@ in
         set -g fish_greeting 'Letsgooo'
         fish_vi_key_bindings
 
-        abbr -a kr cd /Users/david/Library/Mobile\ Documents/com\~apple\~CloudDocs/Krakinn
-        abbr -a nix-r darwin-rebuild switch --flake ~/.config/nix-darwin
+        abbr -a kr cd /Users/${username}/Library/Mobile\ Documents/com\~apple\~CloudDocs/Krakinn
+        abbr -a nix-r darwin-rebuild switch --flake ~/.config/nix-setup
       '';
     };
 
     nushell = {
       enable = true;
-      configFile.source   = ../dotfiles/nushell/config.nu;
-      envFile.source      = ../dotfiles/nushell/env.nu;
+      configFile.source   = ../dotfiles/nushell/default_config.nu;
+      envFile.source      = ../dotfiles/nushell/default_env.nu;
       extraConfig         = /*nu*/''
         use std "path add"
         path add /run/current-system/sw/bin
-        path add /Users/david/.nix-profile/bin
-        path add /etc/profiles/per-user/david/bin
+        path add /Users/${username}/.nix-profile/bin
+        path add /etc/profiles/per-user/${username}/bin
         path add /nix/var/nix/profiles/default/bin
 
         def lsg [] { ls | sort-by type name -i | grid -c | str trim }
@@ -47,8 +48,8 @@ in
       };
       shellAliases = {
         cd = "z";
-        kr = "cd '/Users/david/Library/Mobile Documents/com~apple~CloudDocs/Krakinn'";
-        nix-r = "darwin-rebuild switch --flake ~/.config/nix-darwin";
+        kr = "cd '/Users/${username}/Library/Mobile Documents/com~apple~CloudDocs/Krakinn'";
+        nix-r = "darwin-rebuild switch --flake ~/.config/nix-setup";
       };
     };
 

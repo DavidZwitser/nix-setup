@@ -11,7 +11,6 @@ self: {pkgs, ...}: {
     optimise.automatic = true;
   };
 
-
   programs.zsh.enable = true;  # default shell on catalina
   programs.fish.enable = true;
 
@@ -21,10 +20,12 @@ self: {pkgs, ...}: {
   # System settings
   system = {
     stateVersion = 4;
+
     keyboard = {
       enableKeyMapping = true;
       remapCapsLockToEscape = true;
     };
+
     defaults = {
       finder = {
         AppleShowAllExtensions = true;
@@ -32,11 +33,13 @@ self: {pkgs, ...}: {
         ShowPathbar = true;
         ShowStatusBar = true;
       };
+
       dock = {
         autohide = true;
         mineffect = "scale";
         orientation = "left";
       };
+
       trackpad = {
         TrackpadThreeFingerDrag = true;
       };
@@ -46,22 +49,31 @@ self: {pkgs, ...}: {
   # GUI Software
   homebrew = {
     enable = true;
+    onActivation = {
+      cleanup = "zap";
+    };
     casks = [
       "touchdesigner"
-      "sonic-pi"
       "blender"
-      "iterm2"
+      "sonic-pi"
+      "solvespace"
 
       "affinity-photo"
       "affinity-designer"
       "affinity-publisher"
 
-      "zed" # Not working in home-manager so downloading here
+      "iterm2"
+      "zed"
 
       "arc"
       "obs"
       "timemator"
       "nordvpn"
+
+      "1password" "1password-cli"
+
+      "google-drive"
+      "steelseries-gg" # Hate that I need this
 
       "font-zed-mono" "font-zed-mono-nerd-font" "font-zed-sans"
     ];

@@ -12,25 +12,30 @@
   };
 
   outputs = { self, nixpkgs, nix-darwin, home-manager }:
+  let
+    system = "Kraker";
+  in
   {
-    darwinConfigurations.Kraker = nix-darwin.lib.darwinSystem {
+    darwinConfigurations.${system} = nix-darwin.lib.darwinSystem {
       modules = [
         # Darwin setup
-        (import ./configs/darwin.nix self)
+        (import setup/darwin.nix self)
 
         # Home manager setup
         home-manager.darwinModules.home-manager {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            backupFileExtension = "backup";
 
-          # So overwritten dot files are backed up
-          home-manager.backupFileExtension = "backup";
-          home-manager.users.david = import ./configs/home.nix;
+            # User setups
+            users.david = import setup/davids_home.nix;
+          };
         }
       ];
     };
 
     # Expose the package set, including overlays, for convenience.
-    darwinPackages = self.darwinConfigurations.Kraker.pkgs;
+    darwinPackages = self.darwinConfigurations.${system}.pkgs;
   };
 }
