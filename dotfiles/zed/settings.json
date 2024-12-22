@@ -1,5 +1,14 @@
 {
-  // "buffer_font_family": "BQN386 Unicode",
+  "telemetry": {
+    "metrics": false
+  },
+  "buffer_font_family": "BQN386 Unicode",
+  "features": {
+    "inline_completion_provider": "supermaven"
+  },
+  "language_models": {
+    "ollama": {}
+  },
   "show_inline_completions": false,
   "languages": {
     "Elm": {
@@ -12,27 +21,28 @@
       "show_copilot_suggestions": false
     },
     "Lua": {
+      "show_inline_completions": true,
       "show_copilot_suggestions": true,
       "tab_size": 4
+    },
+    "Python": {
+      "show_inline_completions": false,
+      "hard_tabs": true
     },
     "Markdown": {
       "language_servers": ["markdown-oxide"]
     }
   },
   "assistant": {
-    "version": "1",
-    "provider": {
-      "default_model": {
-        "name": "codellama:latest",
-        "max_tokens": 2048,
-        "keep_alive": "10m"
-      },
-      "name": "ollama"
-      // Recommended setting to allow for model startup
-    }
+    "default_model": {
+      "provider": "ollama",
+      "model": "llama3:latest"
+    },
+    "version": "2",
+    "provider": null
   },
   // "show_whitespaces": "all",
-  "relative_line_numbers": true,
+  // "relative_line_numbers": true,
   "vim_mode": true,
   "vim": {
     "use_multiline_find": true
@@ -57,7 +67,7 @@
     "button": false
   },
   "scrollbar": {
-    "git_diff": false
+    // "git_diff": true
     // "diagnostics": false
   },
   "notification_panel": {

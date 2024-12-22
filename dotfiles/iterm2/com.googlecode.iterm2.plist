@@ -1148,6 +1148,8 @@ The script should do this: \(ai.prompt)</string>
 			</dict>
 			<key>Blend</key>
 			<real>0.4896201313405798</real>
+			<key>Blink Allowed</key>
+			<false/>
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
@@ -1233,6 +1235,8 @@ The script should do this: \(ai.prompt)</string>
 			<key>Description</key>
 			<string>Default</string>
 			<key>Disable Window Resizing</key>
+			<true/>
+			<key>Drag to Scroll in Alternate Screen Mode Disabled</key>
 			<true/>
 			<key>Draw Powerline Glyphs</key>
 			<true/>
@@ -1346,20 +1350,24 @@ The script should do this: \(ai.prompt)</string>
 			<real>0.0</real>
 			<key>Mouse Reporting</key>
 			<true/>
+			<key>Movement Keys Scroll Outside Interactive Apps</key>
+			<false/>
 			<key>Name</key>
 			<string>Hotkey Window</string>
 			<key>Non Ascii Font</key>
 			<string>BQN386 22</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
+			<key>Non-ASCII Ligatures</key>
+			<true/>
 			<key>Normal Font</key>
-			<string>ZedMonoNFM-Medium 18</string>
+			<string>BQN386 18</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Open Toolbelt</key>
 			<false/>
 			<key>Option Key Sends</key>
-			<integer>2</integer>
+			<integer>0</integer>
 			<key>Prevent Opening in a Tab</key>
 			<false/>
 			<key>Prompt Before Closing 2</key>
@@ -1401,7 +1409,7 @@ The script should do this: \(ai.prompt)</string>
 			<key>Send Code When Idle</key>
 			<false/>
 			<key>Set Local Environment Vars</key>
-			<integer>2</integer>
+			<integer>3</integer>
 			<key>Shortcut</key>
 			<string></string>
 			<key>Show Status Bar</key>
@@ -1410,6 +1418,8 @@ The script should do this: \(ai.prompt)</string>
 			<true/>
 			<key>Space</key>
 			<integer>-1</integer>
+			<key>Special Font Config</key>
+			<string>{"entries":[{"start":33,"count":1,"fontName":"BQN386 Unicode"},{"start":35,"count":1,"fontName":"BQN386 Unicode"},{"start":40,"count":1,"fontName":"BQN386 Unicode"},{"count":1,"fontName":"BQN386 Unicode","start":41},{"count":1,"fontName":"BQN386 Unicode","start":43},{"count":1,"fontName":"BQN386 Unicode","start":44},{"fontName":"BQN386 Unicode","start":45,"count":1},{"start":46,"count":1,"fontName":"BQN386 Unicode"},{"start":47,"fontName":"BQN386 Unicode","count":1},{"fontName":"BQN386 Unicode","count":1,"start":58},{"fontName":"BQN386 Unicode","start":59,"count":1},{"fontName":"BQN386 Unicode","count":1,"start":60},{"start":61,"fontName":"BQN386 Unicode","count":1},{"fontName":"BQN386 Unicode","start":62,"count":1},{"start":63,"fontName":"BQN386 Unicode","count":1},{"fontName":"BQN386 Unicode","count":1,"start":64},{"start":91,"count":1,"fontName":"BQN386 Unicode"},{"count":1,"fontName":"BQN386 Unicode","start":93},{"fontName":"BQN386 Unicode","start":96,"count":1},{"count":1,"fontName":"BQN386 Unicode","start":123},{"fontName":"BQN386 Unicode","start":124,"count":1},{"fontName":"BQN386 Unicode","start":125,"count":1},{"fontName":"BQN386 Unicode","count":1,"start":168},{"fontName":"BQN386 Unicode","count":1,"start":171},{"count":1,"fontName":"BQN386 Unicode","start":172},{"count":1,"fontName":"BQN386 Unicode","start":175},{"start":183,"count":1,"fontName":"BQN386 Unicode"},{"start":187,"count":1,"fontName":"BQN386 Unicode"},{"start":215,"count":1,"fontName":"BQN386 Unicode"},{"fontName":"BQN386 Unicode","count":1,"start":247},{"count":1,"fontName":"BQN386 Unicode","start":728},{"count":1,"fontName":"BQN386 Unicode","start":729},{"count":1,"start":732,"fontName":"BQN386 Unicode"},{"count":1,"fontName":"BQN386 Unicode","start":960},{"start":8203,"count":1,"fontName":"BQN386 Unicode"},{"start":8226,"count":1,"fontName":"BQN386 Unicode"},{"fontName":"BQN386 Unicode","count":1,"start":8255},{"fontName":"BQN386 Unicode","start":8316,"count":1},{"count":1,"fontName":"BQN386 Unicode","start":8592},{"start":8593,"count":1,"fontName":"BQN386 Unicode"},{"count":1,"fontName":"BQN386 Unicode","start":8595},{"fontName":"BQN386 Unicode","count":1,"start":8597},{"fontName":"BQN386 Unicode","start":8617,"count":1},{"fontName":"BQN386 Unicode","count":1,"start":8656},{"start":8714,"fontName":"BQN386 Unicode","count":1},{"fontName":"BQN386 Unicode","start":8728,"count":1},{"fontName":"BQN386 Unicode","start":8730,"count":1},{"count":1,"fontName":"BQN386 Unicode","start":8734},{"start":8743,"count":1,"fontName":"BQN386 Unicode"},{"fontName":"BQN386 Unicode","start":8744,"count":1},{"start":8766,"fontName":"BQN386 Unicode","count":1},{"count":1,"fontName":"BQN386 Unicode","start":8781},{"start":8800,"count":1,"fontName":"BQN386 Unicode"},{"fontName":"BQN386 Unicode","count":1,"start":8801},{"count":1,"start":8802,"fontName":"BQN386 Unicode"},{"start":8804,"count":1,"fontName":"BQN386 Unicode"},{"start":8805,"count":1,"fontName":"BQN386 Unicode"},{"start":8847,"count":1,"fontName":"BQN386 Unicode"},{"fontName":"BQN386 Unicode","start":8848,"count":1},{"start":8849,"fontName":"BQN386 Unicode","count":1},{"start":8850,"fontName":"BQN386 Unicode","count":1},{"count":1,"start":8852,"fontName":"BQN386 Unicode"},{"start":8856,"fontName":"BQN386 Unicode","count":1},{"start":8866,"fontName":"BQN386 Unicode","count":1},{"fontName":"BQN386 Unicode","start":8867,"count":1},{"start":8888,"count":1,"fontName":"BQN386 Unicode"},{"fontName":"BQN386 Unicode","start":8900,"count":1},{"start":8902,"count":1,"fontName":"BQN386 Unicode"},{"start":8904,"fontName":"BQN386 Unicode","count":1},{"count":1,"fontName":"BQN386 Unicode","start":8968},{"fontName":"BQN386 Unicode","count":1,"start":8970},{"start":8988,"count":1,"fontName":"BQN386 Unicode"},{"fontName":"BQN386 Unicode","start":9021,"count":1},{"fontName":"BQN386 Unicode","count":1,"start":9022},{"start":9033,"count":1,"fontName":"BQN386 Unicode"},{"fontName":"BQN386 Unicode","start":9035,"count":1},{"fontName":"BQN386 Unicode","start":9042,"count":1},{"count":1,"fontName":"BQN386 Unicode","start":9055},{"fontName":"BQN386 Unicode","start":9079,"count":1},{"start":9097,"fontName":"BQN386 Unicode","count":1},{"fontName":"BQN386 Unicode","count":1,"start":9098},{"count":4,"fontName":"UnicodeIECsymbol","start":9211},{"fontName":"BQN386 Unicode","count":1,"start":9675},{"start":9718,"count":1,"fontName":"BQN386 Unicode"},{"count":1,"fontName":"Octicons","start":9829},{"start":9863,"count":1,"fontName":"BQN386 Unicode"},{"start":9889,"fontName":"Octicons","count":1},{"start":10204,"fontName":"BQN386 Unicode","count":1},{"count":1,"fontName":"BQN386 Unicode","start":10216},{"fontName":"BQN386 Unicode","start":10217,"count":1},{"fontName":"BQN386 Unicode","start":10570,"count":1},{"fontName":"UnicodeIECsymbol","start":11096,"count":1},{"fontName":"Pomicons","start":57344,"count":11},{"start":57504,"fontName":"PowerlineSymbols","count":3},{"count":1,"fontName":"PowerlineExtraSymbols","start":57507},{"start":57520,"count":4,"fontName":"PowerlineSymbols"},{"start":57524,"count":21,"fontName":"PowerlineExtraSymbols"},{"start":57546,"count":1,"fontName":"PowerlineExtraSymbols"},{"start":57548,"count":8,"fontName":"PowerlineExtraSymbols"},{"count":170,"start":57344,"destination":57856,"fontName":"font-awesome-extension"},{"destination":58112,"start":61440,"fontName":"Weather Icons Regular","count":236},{"count":177,"destination":58874,"start":58618,"fontName":"Nerd Font File Types Regular"},{"count":198,"destination":59136,"fontName":"icomoon","start":58880},{"count":396,"fontName":"codicon","start":60000},{"start":61440,"count":736,"fontName":"FontAwesome"},{"count":48,"fontName":"font-logos","start":62208},{"destination":62464,"count":168,"start":61440,"fontName":"Octicons"},{"destination":62633,"fontName":"Octicons","start":62076,"count":1},{"count":86,"destination":62634,"start":61609,"fontName":"Octicons"},{"count":2118,"destination":62720,"start":61441,"fontName":"Material Design Icons"},{"fontName":"Material Design Icons Desktop","start":983041,"count":6896},{"count":1,"fontName":"BQN386 Unicode","start":5534956637},{"start":5534956638,"fontName":"BQN386 Unicode","count":1},{"count":1,"fontName":"BQN386 Unicode","start":5534956650},{"fontName":"BQN386 Unicode","start":5534956654,"count":1},{"start":5534956655,"count":1,"fontName":"BQN386 Unicode"},{"start":5534956663,"fontName":"BQN386 Unicode","count":1},{"count":1,"start":5534956664,"fontName":"BQN386 Unicode"},{"start":5534956675,"count":1,"fontName":"BQN386 Unicode"},{"fontName":"BQN386 Unicode","start":5534956676,"count":1},{"start":5534956680,"count":1,"fontName":"BQN386 Unicode"},{"fontName":"BQN386 Unicode","start":5534956681,"count":1}],"version":1}</string>
 			<key>Status Bar Layout</key>
 			<dict>
 				<key>advanced configuration</key>
@@ -1648,6 +1658,8 @@ The script should do this: \(ai.prompt)</string>
 			<integer>3</integer>
 			<key>Transparency</key>
 			<real>0.13583776595744682</real>
+			<key>Treat Option as Alt</key>
+			<false/>
 			<key>Unicode Version</key>
 			<integer>9</integer>
 			<key>Unlimited Scrollback</key>

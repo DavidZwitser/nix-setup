@@ -7,7 +7,7 @@ self: {pkgs, ...}: {
   nix = {
     package = pkgs.nix;
     settings.experimental-features = "nix-command flakes";
-    optimise.automatic = true;
+    # optimise.automatic = true;
   };
 
   programs.fish.enable = true;
@@ -34,9 +34,10 @@ self: {pkgs, ...}: {
       };
 
       dock = {
-        autohide = true;
+        autohide = false;
         mineffect = "scale";
         orientation = "left";
+        show-recents = false;
       };
 
       trackpad = {
@@ -61,6 +62,8 @@ self: {pkgs, ...}: {
       "affinity-designer"
       "affinity-publisher"
 
+      "deluge"
+
       "iterm2"
       "zed"
 
@@ -69,17 +72,14 @@ self: {pkgs, ...}: {
       "obs"
       "timemator"
       "nordvpn"
-      "ghidra"
       "ollama"
       "utm"
-
-      "rectangle"
+      "blackhole-2ch"
 
       "1password" "1password-cli"
 
       "google-drive"
       "bambu-studio"
-      "steelseries-gg" # Hate that I need this
       "rode-connect"
 
       "font-zed-mono" "font-zed-mono-nerd-font" "font-zed-sans"
@@ -90,6 +90,10 @@ self: {pkgs, ...}: {
       "Logic Pro" = 634148309;
       "Motion" = 434290957;
       "Compressor" = 424390742;
+      "Pages" = 409201541;
+      "Keynote" = 409183694;
+      "Xcode" = 497799835;
+      # "1Password for Safari" = 1569813296;
     };
   };
 

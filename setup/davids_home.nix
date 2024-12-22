@@ -25,30 +25,11 @@ in
         set -g fish_greeting 'Letsgooo'
         fish_vi_key_bindings
 
-        abbr -a cd z
         abbr -a kr cd "/Users/${username}/Library/Mobile\ Documents/com\~apple\~CloudDocs/Krakinn"
-        abbr -a nix-r darwin-rebuild switch --flake ~/.config/nix-setup
+        abbr -a nix-r nix run nix-darwin -- switch --flake ~/.config/nix-setup
+        abbr -a nix-e zed ~/.config/nix-setup
+        abbr -a ms 'set color "#d54200"; for flag in --top-color --middle-color --bottom-color; rivalcfg $flag $color; end'
       '';
-    };
-
-    # Using nushell for data manipulation.
-    nushell = {
-      enable = true;
-      extraConfig = /*nu*/''
-        use std "path add"
-        path add /run/current-system/sw/bin
-        path add /etc/profiles/per-user/${username}/bin
-
-        def lsg [] { ls | sort-by type name -i | grid -c | str trim }
-      '';
-      environmentVariables = {
-        EDITOR = "zed";
-      };
-      shellAliases = {
-        cd = "z";
-        kr = "cd '/Users/${username}/Library/Mobile Documents/com~apple~CloudDocs/Krakinn'";
-        nix-r = "darwin-rebuild switch --flake ~/.config/nix-setup";
-      };
     };
 
     helix = {
@@ -60,38 +41,17 @@ in
     lf = {
       enable = true;
     };
-
-    zellij = {
-      enable = true;
-      settings = {
-        theme = "gruvbox-dark";
-        themes = {
-          gruvbox-dark = {
-          		fg = "#D5C4A1";
-          		bg = "#282828";
-          		black = "#3C3836";
-          		red = "#CC241D";
-          		green = "#98971A";
-          		yellow = "#D79921";
-          		blue = "#3C8588";
-          		magenta = "#B16286";
-          		cyan = "#689D6A";
-          		white = "#FBF1C7";
-          		orange = "#D65D0E";
-         	};
-        };
-      };
-    };
-
-    zoxide = {
-      enable = true;
-      enableFishIntegration = true;
-    };
   };
 
   home = {
     packages = [
       pkgs.bqn386
+      pkgs.direnv
+      pkgs.rivalcfg
+      pkgs.wget
+      pkgs.jre
+      pkgs.julia_19-bin
+      pkgs.ghidra
     ];
 
     # Using absolute paths since flakes will convert path types to store based paths
@@ -121,6 +81,5 @@ in
   };
 
   home.stateVersion = "24.05";
-
   programs.home-manager.enable = true;
 }
